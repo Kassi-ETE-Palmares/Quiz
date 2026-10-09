@@ -1,0 +1,149 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #10172b;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #66e3d3;
+    font-size: 32px;
+}
+
+header p {
+    color: #aeb8d0;
+}
+
+.card {
+    padding: 28px;
+    background: #1b2743;
+    border: 1px solid #354361;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px #0003;
+}
+
+.hidden {
+    display: none;
+}
+
+h2 {
+    line-height: 1.4;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 10px;
+    background: #66e3d3;
+    color: #10172b;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+    background: #8af0e3;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: #aeb8d0;
+    font-size: 14px;
+}
+
+.progress {
+    height: 8px;
+    margin: 20px 0;
+    background: #354361;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progress-fill {
+    width: 0;
+    height: 100%;
+    background: #66e3d3;
+    transition: width 0.3s;
+}
+
+#question-text {
+    margin-bottom: 20px;
+}
+
+.answer-button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 14px;
+    border: 1px solid #435272;
+    border-radius: 10px;
+    background: #253452;
+    color: white;
+    text-align: left;
+}
+
+.answer-button:hover:not(:disabled) {
+    background: #334465;
+}
+
+.answer-button.correct {
+    background: #176b4b;
+    border-color: #61d9a2;
+}
+
+.answer-button.incorrect {
+    background: #7a3041;
+    border-color: #ff7e91;
+}
+
+#feedback {
+    min-height: 20px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.final-score {
+    color: #66e3d3;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+}
